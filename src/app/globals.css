@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: dark;
+/* Force light mode — override Tailwind v4 dark-mode CSS vars */
+:root,
+.dark {
+  color-scheme: light;
+  --background: #f8fafc;
+  --foreground: #0f172a;
 }
 
+html,
 body {
-  background-color: #09090b;
-  color: #f4f4f5;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
   min-height: 100vh;
   font-family: system-ui, -apple-system, sans-serif;
 }
@@ -18,4 +23,8 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="range"] {
+  accent-color: #2563eb;
 }

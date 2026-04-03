@@ -13,8 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" style={{ backgroundColor: "#f8fafc", colorScheme: "light" }}>
+      <body style={{ backgroundColor: "#f8fafc", color: "#0f172a", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+        {children}
+      </body>
     </html>
   );
 }

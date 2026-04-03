@@ -1615,8 +1615,8 @@ export default function App() {
   // Show assessment first if not yet completed
   if (!assessment) {
     return (
-      <main className="flex-1 flex flex-col">
-        <div className="max-w-lg md:max-w-2xl mx-auto w-full px-5 md:px-10 pt-10 pb-16">
+      <main className="flex-1 flex flex-col items-center justify-start">
+        <div className="w-full max-w-xl lg:max-w-2xl px-5 md:px-8 pt-10 pb-16">
           <AssessmentFlow
             onComplete={(a) => {
               saveAssessment(a);
@@ -1634,8 +1634,8 @@ export default function App() {
   const isPhase4 = screen >= 10 && screen <= 12;
 
   return (
-    <main className="flex-1 flex flex-col">
-      <div className="max-w-lg md:max-w-2xl mx-auto w-full px-5 md:px-10 pb-16">
+    <main className="flex-1 flex flex-col items-center">
+      <div className="w-full max-w-xl lg:max-w-2xl px-5 md:px-8 pb-16">
         {screen > 0 && (
           <div className="flex justify-end pt-4 -mb-2">
             <button
